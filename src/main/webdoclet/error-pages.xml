@@ -1,0 +1,4 @@
+  <error-page>
+    <exception-type>vavi.apps.jabber.exception.AuthenticationException</exception-type>
+    <location>/Auth.do</location>
+  </error-page>

@@ -1,0 +1,20 @@
+#
+# Copyright (c) 2004 by Naohide Sano, All rights reserved.
+#
+# Written by Naohide Sano
+#
+# jabber
+#
+# @author	Naohide Sano
+# @version	0.00	040211	nsano	initial version
+#
+
+jdbc.url=jdbc:hsqldb:/usr/klab/tomcat/webapps/jabber/data/test
+jdbc.user=sa
+jdbc.password=
+
+tomcat.home=/usr/klab/tomcat
+xdoclet.lib=etc/xdoclet/lib
+
+rsync.opts=-rltuvC -e ssh
+rsync.dest=/usr/klab/tomcat/webapps/jabber

@@ -1,0 +1,44 @@
+<object class="org.apache.commons.dbcp.PoolableConnectionFactory"
+  xmlns="http://apache.org/xml/xmlns/jakarta/commons/jocl">
+  <!-- the first argument is the ConnectionFactory -->
+  <object class="org.apache.commons.dbcp.DriverManagerConnectionFactory">
+    <string value="@jdbc.url@" />
+    <string value="@jdbc.user@" />
+    <string value="@jdbc.password@" />
+  </object>
+  <!-- the next argument is the ObjectPool -->
+  <object class="org.apache.commons.pool.impl.GenericObjectPool">
+    <object class="org.apache.commons.pool.PoolableObjectFactory" null="true"/>
+    <!-- max active -->
+    <int value="10"/>
+    <!-- when exhausted action, 0 = fail, 1 = block, 2 = grow -->
+    <byte value="1"/>
+    <!-- max wait -->
+    <long value="2000"/>
+    <!-- max idle -->
+    <int value="10"/>
+    <!-- test on borrow -->
+    <boolean value="false"/>
+    <!-- test on return -->
+    <boolean value="false"/>
+    <!-- time between eviction runs -->
+    <long value="10000"/>
+    <!-- number of connections to test per eviction run -->
+    <int value="5"/>
+    <!-- min evictable idle time -->
+    <long value="5000"/>
+    <!-- test while idle -->
+    <boolean value="true"/>
+  </object>
+  <!-- the next argument is the KeyedObjectPoolFactory -->
+  <object class="org.apache.commons.pool.impl.StackKeyedObjectPoolFactory">
+    <!-- max idle -->
+    <int value="5"/>
+  </object>
+  <!-- validation query -->
+  <string value="SELECT 1"/>
+  <!-- default read only -->
+  <boolean value="false"/>
+  <!-- default auto commit -->
+  <boolean value="true"/>
+</object>

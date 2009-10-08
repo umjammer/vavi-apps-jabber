@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="Windows-31J" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+  <!-- Form Bean Definitions -->
+  <form-beans>
+    <form-bean name="nullForm"
+               type="org.apache.struts.action.DynaActionForm">
+    </form-bean>
+
+    <form-bean name="chatForm"
+               type="org.apache.struts.action.DynaActionForm">
+      <form-property name="jid" type="java.lang.String" />
+      <form-property name="message" type="java.lang.String" />
+      <form-property name="function" type="java.lang.String" />
+    </form-bean>
+
+    <form-bean name="profileForm"
+               type="org.apache.struts.action.DynaActionForm">
+      <form-property name="username" type="java.lang.String" />
+      <form-property name="password" type="java.lang.String" />
+      <form-property name="resource" type="java.lang.String" />
+      <form-property name="server" type="java.lang.String" />
+      <form-property name="usessl" type="java.lang.String" />
+      <form-property name="function" type="java.lang.String" />
+    </form-bean>
+  </form-beans>
+
+  <!-- Global Exception Definitions -->
+  <global-exceptions>
+    <exception type="vavi.apps.jabber.exception.AuthenticationException"
+               key="error.login"
+               path="/Auth.do" />
+<!--
+    <exception type="java.lang.Exception"
+               key="error.system"
+	       handler="vavi.apps.jabber.action.struts.SystemExceptionHandler"
+	       path="/Error.do" />
+-->
+  </global-exceptions>
+
+  <!-- Global Forward Definitions -->
+  <global-forwards>
+    <forward name="jabber.top" contextRelative="true" path="/main/Top.do" />
+  </global-forwards>
+
+  <!-- Action Mapping Definitions -->
+  <action-mappings>
+
+    <action path="/Top"
+	    type="vavi.apps.jabber.action.struts.TopAction"
+	    name="nullForm"
+	    scope="request">
+      <forward name="success" contextRelative="true" path="/pages/top.jsp" />
+    </action>
+
+    <action path="/Chat"
+	    type="vavi.apps.jabber.action.struts.ChatAction"
+	    name="chatForm"
+            scope="request">
+      <forward name="success" contextRelative="true" path="/pages/chat.jsp" />
+    </action>
+
+    <action path="/Logout"
+	    type="vavi.apps.jabber.action.struts.LogoutAction"
+	    name="nullForm"
+            scope="request">
+      <forward name="success" contextRelative="true" path="/Auth.do" />
+    </action>
+
+    <action path="/Menu"
+            scope="request"
+	    type="org.apache.struts.actions.ForwardAction"
+	    parameter="/pages/menu.jsp" />
+
+    <action path="/Mailto"
+            scope="request"
+	    type="org.apache.struts.actions.ForwardAction"
+	    parameter="/pages/mailto.jsp" />
+
+    <action path="/Auth"
+            scope="request"
+	    type="org.apache.struts.actions.ForwardAction"
+	    parameter="/Auth.do" />
+
+  </action-mappings>
+
+  <!-- -->
+  <controller />
+
+  <!-- Message Resources Definitions -->
+  <message-resources parameter="application" />
+
+</struts-config>

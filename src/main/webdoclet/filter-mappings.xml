@@ -1,0 +1,16 @@
+   <filter-mapping>
+      <filter-name>userAgentFilter</filter-name>
+      <url-pattern>*.do</url-pattern>
+   </filter-mapping>
+   <filter-mapping>
+      <filter-name>imodeUidFilter</filter-name>
+      <url-pattern>*.do</url-pattern>
+   </filter-mapping>
+   <filter-mapping>
+      <filter-name>jabberAuthenticationFilter</filter-name>
+      <url-pattern>/main/*</url-pattern>
+   </filter-mapping>
+   <filter-mapping>
+      <filter-name>jabberAuthenticationFilter</filter-name>
+      <url-pattern>/index.jsp</url-pattern>
+   </filter-mapping>

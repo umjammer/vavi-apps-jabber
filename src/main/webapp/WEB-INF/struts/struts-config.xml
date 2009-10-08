@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="Windows-31J" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+  <!-- Form Bean Definitions -->
+  <form-beans>
+    <form-bean name="profileForm"
+               type="org.apache.struts.action.DynaActionForm">
+      <form-property name="username" type="java.lang.String" />
+      <form-property name="password" type="java.lang.String" />
+      <form-property name="resource" type="java.lang.String" />
+      <form-property name="server" type="java.lang.String" />
+      <form-property name="usessl" type="java.lang.String" />
+      <form-property name="function" type="java.lang.String" />
+    </form-bean>
+  </form-beans>
+
+  <!-- Global Exception Definitions -->
+  <global-exceptions>
+    <exception type="vavi.apps.jabber.exception.AuthenticationException"
+               key="error.login"
+               path="/Auth.do" />
+<!--
+    <exception type="java.lang.Exception"
+               key="error.system"
+	       handler="vavi.apps.jabber.action.struts.SystemExceptionHandler"
+	       path="/Error.do" />
+-->
+  </global-exceptions>
+
+  <!-- Global Forward Definitions -->
+  <global-forwards>
+    <forward name="jabber.top" contextRelative="true" path="/main/Top.do" />
+  </global-forwards>
+
+  <!-- Action Mapping Definitions -->
+  <action-mappings>
+
+    <action path="/Login"
+            type="vavi.apps.jabber.action.struts.LoginAction"
+	    name="profileForm"
+	    scope="request">
+      <forward name="success" contextRelative="true" path="/main/Top.do" />
+      <forward name="easy-login" path="/pages/login.jsp" />
+    </action>
+
+    <action path="/Auth"
+            type="vavi.apps.jabber.action.struts.AuthAction"
+	    name="profileForm"
+	    scope="request">
+      <forward name="success" contextRelative="true" path="/pages/login.jsp" />
+    </action>
+
+    <action path="/Error"
+            scope="request"
+	    type="org.apache.struts.actions.ForwardAction"
+	    parameter="/pages/error.jsp" />
+
+    <action path="/Help"
+            scope="request"
+	    type="org.apache.struts.actions.ForwardAction"
+	    parameter="/pages/help.jsp" />
+
+  </action-mappings>
+
+  <!-- -->
+  <controller />
+
+  <!-- Message Resources Definitions -->
+  <message-resources parameter="application" />
+
+</struts-config>
