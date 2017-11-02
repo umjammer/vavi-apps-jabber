@@ -27,7 +27,6 @@ import vavi.util.Debug;
  */
 public class AdvancedBeanProcessor extends BeanProcessor {
     /** */
-    @SuppressWarnings("unchecked")
     protected Object processColumn(ResultSet rs, int index, Class propType)
         throws SQLException {
 

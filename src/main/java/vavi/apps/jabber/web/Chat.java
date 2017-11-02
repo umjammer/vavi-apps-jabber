@@ -30,7 +30,7 @@ public class Chat {
     /** */
     private Date endTime;
     /** */
-    private List<Message> messages = new ArrayList<Message>();
+    private List<Message> messages = new ArrayList<>();
 
     /** */
     public Chat() {

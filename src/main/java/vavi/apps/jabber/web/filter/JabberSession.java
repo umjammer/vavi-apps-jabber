@@ -11,7 +11,7 @@ import org.apache.catalina.session.StandardSessionFacade;
 
 
 /**
- * Jabber ‚ð—p‚¢‚½ HttpSession ƒNƒ‰ƒX‚Å‚·B
+ * Jabber ã‚’ç”¨ã„ãŸ HttpSession ã‚¯ãƒ©ã‚¹ã§ã™ã€‚
  * 
  * @author <a href=mailto:vavivavi@yahoo.co.jp>Naohide Sano</a> (nsano)
  * @version 0.00 040224 nsano initial version <br>

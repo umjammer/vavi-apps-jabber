@@ -63,7 +63,7 @@ Debug.printStackTrace(t);
     }
 
     /** */
-    private static Map<String, Action> actions = new HashMap<String, Action>();
+    private static Map<String, Action> actions = new HashMap<>();
 
     /** */
     static {

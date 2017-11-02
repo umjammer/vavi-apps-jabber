@@ -83,7 +83,7 @@ Debug.println(e);
     }
 
     /** */
-    private SortedMap<String, Buddy> buddyStatuses = new TreeMap<String, Buddy>();
+    private SortedMap<String, Buddy> buddyStatuses = new TreeMap<>();
 
     /** */
     public SortedMap<String, Buddy> getBuddyStatuses() {
@@ -91,7 +91,7 @@ Debug.println(e);
     }
     
     /** */
-    private SortedMap<String, Buddy> pmBuddies = new TreeMap<String, Buddy>();
+    private SortedMap<String, Buddy> pmBuddies = new TreeMap<>();
 
     /** */
     public void setPMBuddies(SortedMap<String, Buddy> pmBuddies) {

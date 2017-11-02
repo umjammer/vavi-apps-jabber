@@ -26,7 +26,7 @@ import org.apache.commons.logging.LogFactory;
 
 
 /**
- * DoCoMo ‚Ì UID ‚ğ’uŠ·‚·‚éƒtƒBƒ‹ƒ^‚Å‚·B
+ * DoCoMo ã® UID ã‚’ç½®æ›ã™ã‚‹ãƒ•ã‚£ãƒ«ã‚¿ã§ã™ã€‚
  *
  * @web.filter
  * 	name="imodeUidFilter"
@@ -47,19 +47,19 @@ public class ImodeUidFilter implements Filter {
     /** */
     private static Log logger = LogFactory.getLog(ImodeUidFilter.class);
 
-    /** ÅŒã‚ÉƒAƒNƒZƒX‚µ‚½ UID ‚ğí‚É•Û‚µ‚Ä‚»‚ê‚Å’uŠ·‚·‚é•û–@ */
+    /** æœ€å¾Œã«ã‚¢ã‚¯ã‚»ã‚¹ã—ãŸ UID ã‚’å¸¸ã«ä¿æŒã—ã¦ãã‚Œã§ç½®æ›ã™ã‚‹æ–¹æ³• */
     public static final String METHOD_LAST = "last";
 
-    /** web.xml ƒtƒ@ƒCƒ‹‚Åİ’è‚µ‚½’l‚Å’uŠ·‚·‚é•û–@ */
+    /** web.xml ãƒ•ã‚¡ã‚¤ãƒ«ã§è¨­å®šã—ãŸå€¤ã§ç½®æ›ã™ã‚‹æ–¹æ³• */
     public static final String METHOD_ALWAYS = "always";
 
-    /** "always" ‚Ì‚Ì uid */
+    /** "always" ã®æ™‚ã® uid */
     private String uid;
 
-    /** "last" ‚Ì‚Ì uid */
+    /** "last" ã®æ™‚ã® uid */
     private String lastUid;
 
-    /** ’uŠ·•û–@ */
+    /** ç½®æ›æ–¹æ³• */
     private String method;
 
     /**
@@ -112,7 +112,7 @@ public class ImodeUidFilter implements Filter {
 
 	this.filterConfig = filterConfig;
 
-logger.debug("™™™™ filter init ™™™™");
+logger.debug("â˜†â˜†â˜†â˜† filter init â˜†â˜†â˜†â˜†");
         this.method = filterConfig.getInitParameter("method");
 logger.debug("init.method: " + method);
         if (METHOD_ALWAYS.equals(method)) {

@@ -29,7 +29,7 @@ import javax.servlet.ServletResponse;
  * @web.filter-init-param
  *  name="ignore"
  *  value="true"
- *  description = "true ‚È‚çƒfƒtƒHƒ‹ƒg‚ğ–³‹‚µ‚Ä•K‚¸ƒZƒbƒeƒBƒ“ƒO‚µ‚Ü‚·"
+ *  description = "true ãªã‚‰ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã‚’ç„¡è¦–ã—ã¦å¿…ãšã‚»ãƒƒãƒ†ã‚£ãƒ³ã‚°ã—ã¾ã™"
  * @web.filter-mapping
  *  url-pattern="*.do"
  * 

@@ -19,7 +19,7 @@ import java.util.Map;
 public abstract class ActionProperties {
 
     /** */
-    protected Map<String, Object> props = new HashMap<String, Object>();
+    protected Map<String, Object> props = new HashMap<>();
 
     /** */
     public void set(String name, Object value) {

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="Windows-31J"?>
+<?xml version="1.0" encoding="utf-8"?>
 
 <!-- ////////////////////////////////////////////////////////////////////// -->
 <!-- Copyright (c) 2004 by Naohide Sano, All rights reserved.               -->
@@ -14,6 +14,7 @@
 
 <project default="all" basedir=".">
 
+  <property environment="env"/>
   <property file="local.properties" />
 
   <property name="tomcat.home" value="${tomcat.home}" />
@@ -25,7 +26,7 @@
   <property name="dir.build" value="build"/>
   <property name="dir.install" value="${server.home}/${server.domain}/${server.webapp}"/>
 
-  <!-- ƒNƒ‰ƒXƒpƒX‚Ì’è‹` -->
+  <!-- ã‚¯ãƒ©ã‚¹ãƒ‘ã‚¹ã®å®šç¾© -->
   <path id="tomcat.class.path">
     <fileset dir="${tomcat.home}/lib">
       <include name="servlet-api.jar" />
@@ -52,15 +53,15 @@
     </fileset>
   </path>
 
-  <!-- ƒ^[ƒQƒbƒg‚Ì’è‹` -->
+  <!-- ã‚¿ãƒ¼ã‚²ãƒƒãƒˆã®å®šç¾© -->
 
   <!-- clean -->
-  <target name="clean" description="ƒrƒ‹ƒhŠÂ‹«‚ÌƒNƒŠƒA">
+  <target name="clean" description="ãƒ“ãƒ«ãƒ‰ç’°å¢ƒã®ã‚¯ãƒªã‚¢">
     <delete dir="${dir.build}" failonerror="false" />
   </target>
 
   <!-- prepare -->
-  <target name="prepare" description="ƒrƒ‹ƒhŠÂ‹«‚Ì€”õ">
+  <target name="prepare" description="ãƒ“ãƒ«ãƒ‰ç’°å¢ƒã®æº–å‚™">
     <mkdir dir="${dir.build}" />
     <mkdir dir="${dir.build}/WEB-INF" />
     <mkdir dir="${dir.build}/WEB-INF/classes" />
@@ -73,7 +74,7 @@
   </target>
 
   <!-- javac -->
-  <target name="compile" depends="prepare,compile.support" description="ƒRƒ“ƒpƒCƒ‹">
+  <target name="compile" depends="prepare,compile.support" description="ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«">
     <javac debug="on"
            destdir="${dir.build}/WEB-INF/classes"
 	   deprecation="true"
@@ -86,7 +87,7 @@
   </target>
 
   <!-- xdoclet -->
-  <target name="xdoclet" depends="compile" description="Web ‹LqŽq‚ÌÝ’è">
+  <target name="xdoclet" depends="compile" description="Web è¨˜è¿°å­ã®è¨­å®š">
     <taskdef name="webdoclet"
              classname="xdoclet.modules.web.WebDocletTask"
              classpathref="xdoclet.class.path" />
@@ -108,7 +109,7 @@
                  shortname="vavi"
 	         taglibversion="1.0"
 	         jspversion="1.2"
-	         description="vavi ‚Ìƒ^ƒOƒ‰ƒCƒuƒ‰ƒŠ"
+	         description="vavi ã®ã‚¿ã‚°ãƒ©ã‚¤ãƒ–ãƒ©ãƒª"
 	         useIds="true"
                  destdir="${dir.build}/WEB-INF" />
     </webdoclet>
@@ -188,7 +189,7 @@
   </target>
 
   <!-- deploy -->
-  <target name="install" depends="resource" description="ƒCƒ“ƒXƒg[ƒ‹">
+  <target name="install" depends="resource" description="ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«">
     <exec executable="rsync" dir="${dir.build}">
       <arg line="${rsync.opts}"/>
       <arg value="."/>

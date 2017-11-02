@@ -24,7 +24,7 @@ import org.apache.commons.logging.LogFactory;
 
 
 /**
- * 携帯端末用フィルタです。
+ * 謳ｺ蟶ｯ遶ｯ譛ｫ逕ｨ繝輔ぅ繝ｫ繧ｿ縺ｧ縺吶�
  * 
  * @web.filter
  *  name="mobileTerminalFilter"

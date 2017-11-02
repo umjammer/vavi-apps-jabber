@@ -22,7 +22,7 @@ import vavi.util.Singleton;
 public class GroupChatManager extends Singleton {
 
     /** */
-    private List<ChatRoom> rooms = new ArrayList<ChatRoom>();
+    private List<ChatRoom> rooms = new ArrayList<>();
 
     /** */
     private ConnectionManager connectionManager = Singleton.getInstance(ConnectionManager.class);

@@ -25,7 +25,7 @@ import org.apache.commons.logging.LogFactory;
 
 
 /**
- * User-Agent Header を置換するフィルタです。
+ * User-Agent Header 繧堤ｽｮ謠帙☆繧九ヵ繧｣繝ｫ繧ｿ縺ｧ縺吶�
  * 
  * @web.filter
  *  name="userAgentFilter"
@@ -119,7 +119,7 @@ logger.debug("user-agent: " + userAgent);
         public Enumeration<?> getHeaders(String name) {
             if (TARGET_HEADER_NAME.equalsIgnoreCase(name)) {
 logger.debug("user-agent: " + userAgent);
-                Vector<String> headers = new Vector<String>();
+                Vector<String> headers = new Vector<>();
                 headers.add(userAgent);
                 return headers.elements();
             } else {

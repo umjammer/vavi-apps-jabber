@@ -24,12 +24,12 @@ import vavi.util.Singleton;
 
 
 /**
- * ƒCƒ“ƒXƒ^ƒ“ƒgƒƒbƒZƒ“ƒWƒƒ[‚ÌƒAƒCƒRƒ“‚ğ•\¦‚·‚éƒ^ƒO‚Å‚·B
+ * ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ãƒˆãƒ¡ãƒƒã‚»ãƒ³ã‚¸ãƒ£ãƒ¼ã®ã‚¢ã‚¤ã‚³ãƒ³ã‚’è¡¨ç¤ºã™ã‚‹ã‚¿ã‚°ã§ã™ã€‚
  *
  * @jsp.tag
  * 	name="imIcon"
  *	body-content="empty"
- *	description="ƒCƒ“ƒXƒ^ƒ“ƒgƒƒbƒZƒ“ƒWƒƒ[‚ÌƒAƒCƒRƒ“‚ğ•\¦‚µ‚Ü‚·"
+ *	description="ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ãƒˆãƒ¡ãƒƒã‚»ãƒ³ã‚¸ãƒ£ãƒ¼ã®ã‚¢ã‚¤ã‚³ãƒ³ã‚’è¡¨ç¤ºã—ã¾ã™"
  *
  * @author <a href=mailto:vavivavi@yahoo.co.jp>Naohide Sano</a> (nsano)
  * @version 0.00 040222 nsano initial version <br>

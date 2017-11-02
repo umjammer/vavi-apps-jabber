@@ -47,11 +47,11 @@ logger.debug("jdbc.driver: " + jdbcDriver);
             poolDriver = (Driver) Class.forName(poolDriverName).newInstance();
 logger.debug("pool.driver: " + poolDriver);
         } catch (ClassNotFoundException e) {
-            throw (RuntimeException) new IllegalStateException().initCause(e);
+            throw new IllegalStateException(e);
         } catch (InstantiationException e) {
-            throw (RuntimeException) new IllegalStateException().initCause(e);
+            throw new IllegalStateException(e);
         } catch (IllegalAccessException e) {
-            throw (RuntimeException) new IllegalStateException().initCause(e);
+            throw new IllegalStateException(e);
         }
     }
 

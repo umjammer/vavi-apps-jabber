@@ -25,7 +25,7 @@ import vavi.util.Debug;
 
 
 /**
- * Jabber 認証を用いた認証フィルタクラスです。
+ * Jabber 隱崎ｨｼ繧堤畑縺�縺溯ｪ崎ｨｼ繝輔ぅ繝ｫ繧ｿ繧ｯ繝ｩ繧ｹ縺ｧ縺吶�
  *
  * @web.filter
  *  name="jabberAuthenticationFilter"
