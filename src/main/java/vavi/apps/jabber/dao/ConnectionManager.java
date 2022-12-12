@@ -46,11 +46,7 @@ public final class ConnectionManager extends Singleton {
 logger.debug("jdbc.driver: " + jdbcDriver);
             poolDriver = (Driver) Class.forName(poolDriverName).newInstance();
 logger.debug("pool.driver: " + poolDriver);
-        } catch (ClassNotFoundException e) {
-            throw new IllegalStateException(e);
-        } catch (InstantiationException e) {
-            throw new IllegalStateException(e);
-        } catch (IllegalAccessException e) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
             throw new IllegalStateException(e);
         }
     }

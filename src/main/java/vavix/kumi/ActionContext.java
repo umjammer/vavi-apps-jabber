@@ -74,7 +74,7 @@ public class ActionContext {
     /** */
     public boolean getResponseBoolean(String name) {
         Boolean result = (Boolean) response.get(name);
-        return result.booleanValue();
+        return result;
     }
 }
 

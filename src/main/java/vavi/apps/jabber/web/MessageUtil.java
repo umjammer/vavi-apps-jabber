@@ -36,7 +36,7 @@ public class MessageUtil {
     /** */
     public static Message getSignedOnMessage(String username, String buddyname) {
         Message message = new Message(username, buddyname);
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder(); // TODO
         message.setMessage(sb.toString());
         return message;
     }
@@ -44,7 +44,7 @@ public class MessageUtil {
     /** */
     public static Message getSignedOffMessage(String username, String buddyname) {
         Message message = new Message(username, buddyname);
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder(); // TODO
         message.setMessage(sb.toString());
         return message;
     }
@@ -52,7 +52,7 @@ public class MessageUtil {
     /** */
     public static Message getOfflineMessage(String username, String buddyname) {
         Message message = new Message(username, buddyname);
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder(); // TODO
         message.setMessage(sb.toString());
         return message;
     }

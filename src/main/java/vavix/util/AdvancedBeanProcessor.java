@@ -37,15 +37,15 @@ Debug.print(index + ": " + meta.getColumnName(index) + ": " + propType);
             if ((meta.getColumnType(index) == Types.CHAR) ||
                 (meta.getColumnType(index) == Types.VARCHAR)) {
                 String value = rs.getString(index);
-                return new Boolean("true".equals(value) || "on".equals(value) ||
-                                   "yes".equals(value));
+                return "true".equals(value) || "on".equals(value) ||
+                        "yes".equals(value);
             } else if ((meta.getColumnType(index) == Types.BIT) ||
                        (meta.getColumnType(index) == Types.TINYINT) ||
                        (meta.getColumnType(index) == Types.SMALLINT) ||
                        (meta.getColumnType(index) == Types.INTEGER) ||
                        (meta.getColumnType(index) == Types.BIGINT)) {
                 int value = rs.getInt(index);
-                return new Boolean(value != 0);
+                return value != 0;
             }
         } else if (propType.equals(Calendar.class) &&
                    (meta.getColumnType(index) == Types.TIMESTAMP)) {

@@ -59,18 +59,15 @@ Debug.println(e);
         message = MessageUtil.replaceText(message, false);
         
         if (from.equals("") ||
-            from.toLowerCase().equals(chat.getRoom().toLowerCase())) {
+            from.equalsIgnoreCase(chat.getRoom())) {
             //server message
-            conversationArea.append(MessageUtil.getTime() +
-                                    "<font color='green'> -> " + message + "</font><br>");
+            conversationArea.append(MessageUtil.getTime()).append("<font color='green'> -> ").append(message).append("</font><br>");
         } else {
             if (message.startsWith(" /me ")) {
                 message = message.replaceAll("^ \\/me ", "");
-                conversationArea.append(MessageUtil.getTime() +
-                                        " <b><font color='maroon'>* " + from + "</font></b> " + message + "<br>");
+                conversationArea.append(MessageUtil.getTime()).append(" <b><font color='maroon'>* ").append(from).append("</font></b> ").append(message).append("<br>");
             } else {
-                conversationArea.append(MessageUtil.getTime() + " <font color='#16569e'><b>" +
-					from + "</b></font>: " + message + "<br>");
+                conversationArea.append(MessageUtil.getTime()).append(" <font color='#16569e'><b>").append(from).append("</b></font>: ").append(message).append("<br>");
             }
             try {
                 application.exec("play.groupRecieved.sound");

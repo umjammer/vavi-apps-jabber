@@ -99,8 +99,8 @@ public class ChatManager extends Singleton {
             chat.setStartTime(startTime);
             chat.setEndTime(endTime);
             if (messages != null) {
-                for (int i = 0; i < messages.size(); i++) {
-                    chat.addMessage((Message) messages.get(i));
+                for (Object message : messages) {
+                    chat.addMessage((Message) message);
                 }
             }
             return chat;

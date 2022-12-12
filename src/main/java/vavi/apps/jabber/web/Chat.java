@@ -81,8 +81,7 @@ public class Chat {
     /** */
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < messages.size(); i++) {
-            Message message = messages.get(i);
+        for (Message message : messages) {
             switch (message.getType()) {
             case 0:
                 if (message.getUsername().equals(username)) {

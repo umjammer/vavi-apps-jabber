@@ -29,9 +29,7 @@ public class GroupChatManager extends Singleton {
 
     /** */
     public boolean isRoomOpen(String server) {
-        for (int i = 0; i < rooms.size(); i++) {
-            ChatRoom chatRoom = rooms.get(i);
-
+        for (ChatRoom chatRoom : rooms) {
             if (server.equalsIgnoreCase(chatRoom.getRoomName())) {
                 return true;
             }
@@ -42,9 +40,7 @@ public class GroupChatManager extends Singleton {
 
     /** */
     public ChatRoom getChat(String server) {
-        for (int i = 0; i < rooms.size(); i++) {
-            ChatRoom chatRoom = rooms.get(i);
-
+        for (ChatRoom chatRoom : rooms) {
             if (server.equalsIgnoreCase(chatRoom.getRoomName())) {
                 return chatRoom;
             }

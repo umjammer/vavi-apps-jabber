@@ -73,7 +73,7 @@ public class JabberAuthenticationFilter implements Filter {
     }
 
     /** */
-    private class RequestWrapper extends HttpServletRequestWrapper {
+    private static class RequestWrapper extends HttpServletRequestWrapper {
 
         JabberProtocol jabberClient;
 
