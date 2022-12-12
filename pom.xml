@@ -37,6 +37,53 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>xdoclet-maven-plugin</artifactId>
+        <version>1.0</version>
+        <executions>
+          <execution>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>xdoclet</goal>
+            </goals>
+            <configuration>
+              <tasks>
+                <webdoclet
+                    destdir="${project.build.directory}/WEB-INF"
+                    mergedir="${basedir}/src/main/webdoclet" verbose="true"
+                    force="true" excludedtags="@version,@author,@todo">
+                  <fileset dir="${basedir}/src/main/java">
+                    <include name="**/*Tag.java" />
+                    <include name="**/*Filter.java" />
+                    <include name="**/*Listener.java" />
+                    <exclude name="com/**/*" />
+                  </fileset>
+                  <deploymentdescriptor xmlencoding="UTF-8"
+                                        servletspec="2.3"
+                                        destdir="${project.build.directory}/WEB-INF" />
+                  <jsptaglib xmlencoding="UTF-8"
+                             filename="vavi.tld"
+                             shortname="vavi"
+                             taglibversion="1.0"
+                             jspversion="1.2"
+                             description="vavi's tag library"
+                             useIds="true"
+                             destdir="${project.build.directory}/WEB-INF" />
+                </webdoclet>
+              </tasks>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.3.2</version>
+        <configuration>
+          <webXml>${project.build.directory}/WEB-INF/web.xml</webXml>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 
