@@ -1,6 +1,10 @@
- [![Parent](https://img.shields.io/badge/Parent-vavi--net--im-pink)](https://github.com/umjammer/vavi-net-im)
+[![Release](https://jitpack.io/v/umjammer/vavi-apps-xmpp.svg)](https://jitpack.io/#umjammer/vavi-apps-xmpp)
+[![Java CI](https://github.com/umjammer/vavi-apps-xmpp/actions/workflows/maven.yml/badge.svg)](https://github.com/umjammer/vavi-apps-xmpp/actions/workflows/maven.yml)
+[![CodeQL](https://github.com/umjammer/vavi-apps-xmpp/actions/workflows/codeql.yml/badge.svg)](https://github.com/umjammer/vavi-apps-xmpp/actions/workflows/codeql-analysis.yml)
+![Java](https://img.shields.io/badge/Java-8-b07219)
+[![Parent](https://img.shields.io/badge/Parent-vavi--net--im-pink)](https://github.com/umjammer/vavi-apps)
 
-# vavi-apps-jabber
+# vavi-apps-xmpp
 
 JabberWeb
 

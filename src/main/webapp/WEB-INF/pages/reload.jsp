@@ -24,7 +24,7 @@
 <body>
 
 <center>
-Globals ¤ò¥ê¥í¡¼¥É¤·¤Þ¤¹¤¿¡£
+Globals ã‚’ãƒªãƒ­ãƒ¼ãƒ‰ã—ã¾ã™ãŸã€‚
 </center>
 
 <hr>
