@@ -148,20 +148,28 @@ e.printStackTrace(System.err);
             return ' ';
         }
         char c = 0;
-        if ("available".equals(type)) {
+        switch (type) {
+        case "available":
             c = '@';
-        } else if ("away".equals(type)) {
+            break;
+        case "away":
             c = '-';
-        } else if ("chat".equals(type)) {
+            break;
+        case "chat":
             c = '*';
-        } else if ("do_not_disturb".equals(type)) {
+            break;
+        case "do_not_disturb":
             c = 'x';
-        } else if ("extended_away".equals(type)) {
+            break;
+        case "extended_away":
             c = '_';
-        } else if ("invisible".equals(type)) {
+            break;
+        case "invisible":
             c = '#';
-        } else {
+            break;
+        default:
             c = '?';
+            break;
         }
         return c;
     }

@@ -79,7 +79,7 @@ public class UserAgentFilter implements Filter {
 
         RequestWrapper rw = new RequestWrapper((HttpServletRequest) request);
         @SuppressWarnings("unused")
-        WeakReference<HttpServletRequestWrapper> wr = new WeakReference<HttpServletRequestWrapper>(rw);
+        WeakReference<HttpServletRequestWrapper> wr = new WeakReference<>(rw);
 
         // Pass control on to the next filter
         chain.doFilter(rw, response);

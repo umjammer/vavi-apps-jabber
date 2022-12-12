@@ -62,7 +62,7 @@ public class MessageManager extends Singleton {
                     message.getBuddyname(),
                     new Timestamp(message.getSent().getTime()),
                     message.getMessage(),
-                    new Integer(message.getType())
+                        message.getType()
                 });
 Debug.print("result: " + result);
         } finally {

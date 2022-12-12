@@ -28,13 +28,13 @@ Help
 
 <hr>
 
-<li>Login ... ���O�C�����܂�</li>
-<li>Easy ... ���O�C����ʂœ��͂����l��ێ�������ʂ�\�����܂��A��ʕۑ�����Ύ��񃍃O�C�����Ɋy�ł��܂�</li>
+<li>Login ... ログインします</li>
+<li>Easy ... ログイン画面で入力した値を保持した画面を表示します、画面保存すれば次回ログイン時に楽できます</li>
 
 <br>
 <br>
 
-<li><html:link action="/Auth.do" >�߂�</html:link></li>
+<li><html:link action="/Auth.do" >戻る</html:link></li>
 
 <%@ include file="footer.jsp" %>
 

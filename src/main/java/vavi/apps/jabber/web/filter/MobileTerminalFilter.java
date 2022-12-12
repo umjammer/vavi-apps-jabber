@@ -70,7 +70,7 @@ public class MobileTerminalFilter implements Filter {
 
         RequestWrapper rw = new RequestWrapper((HttpServletRequest) request);
         @SuppressWarnings("unused")
-        WeakReference<HttpServletRequestWrapper> wr = new WeakReference<HttpServletRequestWrapper>(rw);
+        WeakReference<HttpServletRequestWrapper> wr = new WeakReference<>(rw);
 
         //
         String qs = ((HttpServletRequest)request).getQueryString();
@@ -90,7 +90,7 @@ public class MobileTerminalFilter implements Filter {
     }
 
     /** */
-    private class RequestWrapper extends HttpServletRequestWrapper {
+    private static class RequestWrapper extends HttpServletRequestWrapper {
         /** */
         RequestWrapper(HttpServletRequest request) {
             super(request);
