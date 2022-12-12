@@ -10,7 +10,7 @@ JabberWeb
 
 ## TODO
 
-  * のわ〜
+  * 
 
 ## Application Framework
 
